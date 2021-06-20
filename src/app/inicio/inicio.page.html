@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de mundos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let character of characters" [routerLink]="['/mundos/' + character.id]">
+      <ion-label>{{character.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

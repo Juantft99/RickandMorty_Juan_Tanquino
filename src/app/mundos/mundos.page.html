@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <div *ngIf="characters"></div>
+    <ion-title>Enlaces de Personajes de {{characters?.name}}</ion-title>
+    <ion-buttons slot= "start">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let character of characters?.residents">
+      <ion-label>{{character}}</ion-label>
+    </ion-item>
+    
+  </ion-list>    
+</ion-content>
